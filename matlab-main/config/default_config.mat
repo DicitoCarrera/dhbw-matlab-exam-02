@@ -1,0 +1,16 @@
+config = struct();
+
+% Input/output settings
+config.inputFile   = 'data/input.csv';
+config.outputDir   = 'results/';
+
+% Data processing parameters
+config.targetColumn = 'Value';  % Name of the column to analyze
+config.filterEnabled = true;    % Enable optional filtering
+config.threshold     = 10;      % Example parameter
+
+% Debugging and logging
+config.verbose = true;
+
+% Save it as .mat
+save('config/default_config.mat', 'config');
